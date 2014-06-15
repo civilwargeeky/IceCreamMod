@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "icecreammod",
+  "name": "Ice Cream Mod",
+  "description": "Adds Ice Cream and related items to Minecraft",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "github.com/civilwargeeky/icecreammod",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["civilwargeeky"],
+  "credits": "Pahimar for his Let's Mod Series (and rebooted), all the tutorial makers and help on the Minecraft forums",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
