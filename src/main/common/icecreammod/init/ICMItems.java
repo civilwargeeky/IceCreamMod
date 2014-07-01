@@ -1,15 +1,16 @@
 package icecreammod.init;
 
+import icecreammod.items.IceCreamBase;
+import icecreammod.lib.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
-import icecreammod.items.TypedIceCream;
 
 
 public class ICMItems {
 	
-	public static TypedIceCream iceCream = new TypedIceCream("iceCream","Ice Cream");
+	public static IceCreamBase iceCreamBase = new IceCreamBase("Ice Cream");
 	
 	public static void init() {
-		GameRegistry.registerItem(iceCream, iceCream.name);
+		GameRegistry.registerItem(iceCreamBase, iceCreamBase.name);
 		
 	}
 }

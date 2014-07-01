@@ -10,7 +10,7 @@ public class BaseItem extends Item {
 	
 	public BaseItem(String unlocalizedName) {
 		super();
-		this.name = unlocalizedName;
+		this.name = unlocalizedName; //Copy changes to BaseFood
 		this.setUnlocalizedName(this.name);
 		this.setCreativeTab(IceCreamMod.IceCreamTab);
 		this.setTextureName(ModInfo.MOD_ID + ":" + this.name);
