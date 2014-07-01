@@ -1,16 +1,13 @@
 package icecreammod;
 
 import icecreammod.init.ConfigurationHandler;
+import icecreammod.init.CreativeTab;
 import icecreammod.init.ICMItems;
 import icecreammod.lib.ModInfo;
-import icecreammod.proxy.IProxy;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -31,13 +28,7 @@ public class IceCreamMod
   	
   	ConfigurationHandler.init(event.getSuggestedConfigurationFile());
   	
-  	IceCreamTab = new CreativeTabs(ModInfo.MOD_ID) {
-			@Override
-			public Item getTabIconItem() {
-				//TODO: Add in the Vanilla Ice Cream Item once it is done
-				return Items.apple;
-			}
-  	};
+  	IceCreamTab = new CreativeTab(ModInfo.MOD_ID, ICMItems.iceCreamBowl, 1);
   	
   	ICMItems.init();
   	
