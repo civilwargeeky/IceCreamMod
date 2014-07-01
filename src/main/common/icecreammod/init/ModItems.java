@@ -7,7 +7,7 @@ import icecreammod.items.IceCreamBase;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 
-public class ICMItems {
+public class ModItems {
 	private static float averageSat(BaseFood par1, BaseFood par2) { //This is a weighted average for calculating saturation
 		return (par1.saturation+par2.saturation)*3/4;
 	}

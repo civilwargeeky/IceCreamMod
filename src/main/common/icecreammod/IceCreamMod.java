@@ -2,7 +2,7 @@ package icecreammod;
 
 import icecreammod.init.ConfigurationHandler;
 import icecreammod.init.CreativeTab;
-import icecreammod.init.ICMItems;
+import icecreammod.init.ModItems;
 import icecreammod.lib.ModInfo;
 import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
@@ -28,9 +28,9 @@ public class IceCreamMod
   	
   	ConfigurationHandler.init(event.getSuggestedConfigurationFile());
   	
-  	IceCreamTab = new CreativeTab(ModInfo.MOD_ID, ICMItems.iceCreamBowl, 1);
+  	IceCreamTab = new CreativeTab(ModInfo.MOD_ID, ModItems.iceCreamBowl, 1);
   	
-  	ICMItems.init();
+  	ModItems.init();
   	
   }
   
