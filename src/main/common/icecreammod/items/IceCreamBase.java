@@ -7,14 +7,13 @@ import net.minecraft.world.World;
 
 public class IceCreamBase extends IceCream {
 
-	public IceCreamBase(String unlocalizedName) {
-		super(unlocalizedName, Reference.typeNames, 0, 0);
+	public IceCreamBase(String name, int amountHealed, float saturation) {
+		super(name, Reference.typeNames, amountHealed, saturation);
 	}
 	
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) { //I want icon registry, but not food.
 		return stack;
-		
 	}
 
 }

@@ -13,12 +13,11 @@ import net.minecraft.util.IIcon;
 
 public class IceCream extends BaseFood {
 	
-	public String displayName; //This is for texture assignment
 	public String[] subnames;
 	public IIcon[] texture;
 
 	public IceCream(String displayName, String[] subnames, int amountFood, float saturation) {
-		super(Reference.sanitize(displayName), amountFood, saturation); //Just sanitize the display name for unlocalized :D
+		super(displayName, amountFood, saturation);
 		this.subnames = subnames;
 		this.displayName = displayName;
 		this.setMaxDamage(0);
@@ -26,10 +25,18 @@ public class IceCream extends BaseFood {
 		this.texture = new IIcon[subnames.length];
 	}
 	
-  @Override
+	public IceCream(String displayName, int amountFood, float saturation) {
+		this(displayName, Reference.typeNames, amountFood, saturation);
+	}
+
+	@Override
 	public void registerIcons(IIconRegister register) {
 		for (int i=0; i < this.subnames.length; i++) {
-			this.texture[i] = register.registerIcon(ModInfo.MOD_ID + ":" + Reference.sanitize(this.subnames[i]) + this.name.substring(0, 1).toUpperCase() + this.name.substring(1));
+	  	String subname = Reference.sanitize(this.subnames[i]);
+	  	System.out.println(subname);
+	  	String name = Reference.sanitize(this.name);
+	  	System.out.println(name);
+			this.texture[i] = register.registerIcon(ModInfo.MOD_ID + ":" + subname + this.name.substring(0, 1).toUpperCase() + name.substring(1));
 		}
 	}
 	
