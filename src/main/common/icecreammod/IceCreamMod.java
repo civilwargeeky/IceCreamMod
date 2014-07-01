@@ -1,13 +1,16 @@
 package icecreammod;
 
+import icecreammod.init.ConfigurationHandler;
 import icecreammod.init.ICMItems;
 import icecreammod.lib.ModInfo;
+import icecreammod.proxy.IProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
@@ -20,8 +23,12 @@ public class IceCreamMod
 	@Instance(ModInfo.MOD_ID)
 	public static IceCreamMod	instance;
 	
+	//@SidedProxy(clientSide = ModInfo.CLIENT_PROXY, serverSide = ModInfo.SERVER_PROXY)
+	//public static IProxy proxy;
 	
   @EventHandler public void preInit(FMLPreInitializationEvent event) {
+  	ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+  	
   	IceCreamTab = new CreativeTabs(ModInfo.MOD_ID) {
 			@Override
 			public Item getTabIconItem() {
@@ -29,12 +36,12 @@ public class IceCreamMod
 				return Items.apple;
 			}
   	};
- 	
+  	
   	ICMItems.init();
+  	
   }
   
   @EventHandler public void init(FMLInitializationEvent event) {
-  	
   	
   }
 }

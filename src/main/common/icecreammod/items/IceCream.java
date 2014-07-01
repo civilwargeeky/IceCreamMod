@@ -33,9 +33,7 @@ public class IceCream extends BaseFood {
 	public void registerIcons(IIconRegister register) {
 		for (int i=0; i < this.subnames.length; i++) {
 	  	String subname = Reference.sanitize(this.subnames[i]);
-	  	System.out.println(subname);
 	  	String name = Reference.sanitize(this.name);
-	  	System.out.println(name);
 			this.texture[i] = register.registerIcon(ModInfo.MOD_ID + ":" + subname + this.name.substring(0, 1).toUpperCase() + name.substring(1));
 		}
 	}
