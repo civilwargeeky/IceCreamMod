@@ -12,6 +12,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = ModInfo.MOD_ID, name = ModInfo.MOD_NAME, version = icecreammod.lib.ModInfo.DEFAULT_VERSION)
@@ -27,6 +28,7 @@ public class IceCreamMod
 	//public static IProxy proxy;
 	
   @EventHandler public void preInit(FMLPreInitializationEvent event) {
+  	
   	ConfigurationHandler.init(event.getSuggestedConfigurationFile());
   	
   	IceCreamTab = new CreativeTabs(ModInfo.MOD_ID) {
@@ -42,6 +44,8 @@ public class IceCreamMod
   }
   
   @EventHandler public void init(FMLInitializationEvent event) {
-  	
+  }
+  
+  @EventHandler public void postInit(FMLPostInitializationEvent event) {
   }
 }
