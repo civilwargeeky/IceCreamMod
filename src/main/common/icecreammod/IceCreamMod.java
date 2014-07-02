@@ -34,6 +34,8 @@ public class IceCreamMod
   	ConfigurationHandler.init(event.getSuggestedConfigurationFile());
   	ConfigurationHandler.loadConfig();
   	
+  	FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+  	
   	IceCreamTab = new CreativeTab(ModInfo.MOD_ID, ModItems.iceCreamBowl, 1);
   	
   	ModItems.init();
@@ -42,7 +44,6 @@ public class IceCreamMod
   
   @EventHandler 
   public void init(FMLInitializationEvent event) {
-  	FMLCommonHandler.instance().bus().register(instance);
   	
   	Recipes.init();
   }
