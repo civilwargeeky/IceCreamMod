@@ -3,6 +3,7 @@ package icecreammod;
 import icecreammod.init.ConfigurationHandler;
 import icecreammod.init.CreativeTab;
 import icecreammod.init.ModItems;
+import icecreammod.init.Recipes;
 import icecreammod.lib.ModInfo;
 import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
@@ -35,6 +36,7 @@ public class IceCreamMod
   }
   
   @EventHandler public void init(FMLInitializationEvent event) {
+  	Recipes.init();
   }
   
   @EventHandler public void postInit(FMLPostInitializationEvent event) {
