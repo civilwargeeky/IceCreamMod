@@ -10,3 +10,6 @@ bin/
 
 #Gradle Related
 .gradle/
+*.iws
+*.ipr
+*.iml
