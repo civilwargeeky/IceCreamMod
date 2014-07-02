@@ -18,8 +18,7 @@ public class GUIFactory implements IModGuiFactory {
 
 	@Override
 	public Class<? extends GuiScreen> mainConfigGuiClass() {
-		// TODO Auto-generated method stub
-		return icecreammod.gui.ConfigGUI.class;
+		return ConfigGUI.class;
 	}
 
 	@Override

@@ -8,6 +8,8 @@ import net.minecraftforge.common.config.Configuration;
 import cpw.mods.fml.client.config.GuiConfig;
 
 public class ConfigGUI extends GuiConfig {
+	
+	
 
 	public ConfigGUI(GuiScreen parentScreen) {
 		super(parentScreen, 
@@ -15,7 +17,7 @@ public class ConfigGUI extends GuiConfig {
 				ModInfo.MOD_ID,
 				false, //All require world restart
 				false, //All require Minecraft restart
-				"Test");
+				ConfigurationHandler.baseTitle + Integer.toString(ConfigurationHandler.timesEdited));
 				//GuiConfig.getAbridgedConfigPath(ConfigurationHandler.config.toString())); //Title
 	}
 
