@@ -5,11 +5,13 @@ import icecreammod.init.CreativeTab;
 import icecreammod.init.ModItems;
 import icecreammod.init.Recipes;
 import icecreammod.lib.ModInfo;
+import icecreammod.proxy.IProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -23,8 +25,8 @@ public class IceCreamMod
 	@Instance(ModInfo.MOD_ID)
 	public static IceCreamMod	instance;
 	
-	//@SidedProxy(clientSide = ModInfo.CLIENT_PROXY, serverSide = ModInfo.SERVER_PROXY)
-	//public static IProxy proxy;
+	@SidedProxy(clientSide = ModInfo.CLIENT_PROXY, serverSide = ModInfo.SERVER_PROXY)
+	public static IProxy proxy;
 	
   @EventHandler 
   public void preInit(FMLPreInitializationEvent event) {
