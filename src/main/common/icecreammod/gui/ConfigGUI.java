@@ -9,7 +9,7 @@ import cpw.mods.fml.client.config.GuiConfig;
 
 public class ConfigGUI extends GuiConfig {
 	
-	
+	private static String title = ModInfo.MOD_NAME;
 
 	public ConfigGUI(GuiScreen parentScreen) {
 		super(parentScreen, 
@@ -17,7 +17,7 @@ public class ConfigGUI extends GuiConfig {
 				ModInfo.MOD_ID,
 				false, //All require world restart
 				false, //All require Minecraft restart
-				ConfigurationHandler.baseTitle + Integer.toString(ConfigurationHandler.timesEdited));
+				title);
 				//GuiConfig.getAbridgedConfigPath(ConfigurationHandler.config.toString())); //Title
 	}
 
